@@ -9,8 +9,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Get.put(PhotosController());
-    Get.put(NewPostsController());
     return Scaffold(
       appBar: AppBar(
         title: const Center(
@@ -40,20 +38,20 @@ class HomeScreen extends StatelessWidget {
                       ),
                     )),
               ),
-              Center(
-                child: TextButton(
-                    onPressed: () {
-                      Get.toNamed(postsScreen);
-                      // photosController.getPhotos();
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black87)),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 50, vertical: 20),
-                      child: const Text('Posts Screen'),
-                    )),
-              ),
+              // Center(
+              //   child: TextButton(
+              //       onPressed: () {
+              //         Get.toNamed(postsScreen);
+              //         // photosController.getPhotos();
+              //       },
+              //       child: Container(
+              //         decoration: BoxDecoration(
+              //             border: Border.all(color: Colors.black87)),
+              //         padding: const EdgeInsets.symmetric(
+              //             horizontal: 50, vertical: 20),
+              //         child: const Text('Posts Screen'),
+              //       )),
+              // ),
               Center(
                 child: TextButton(
                     onPressed: () {
