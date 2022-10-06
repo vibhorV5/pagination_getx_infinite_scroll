@@ -33,6 +33,18 @@ class PostsScreenState extends State<PostsScreen> {
   }
 
   Future<void> _fetchPage(int pageKey) async {
+    // try {
+    //   final newItems = await RemoteApi.getCharacterList(pageKey, _pageSize);
+    //   final isLastPage = newItems.length < _pageSize;
+    //   if (isLastPage) {
+    //     _pagingController.appendLastPage(newItems);
+    //   } else {
+    //     final nextPageKey = pageKey + newItems.length;
+    //     _pagingController.appendPage(newItems, nextPageKey);
+    //   }
+    // } catch (error) {
+    //   _pagingController.error = error;
+    // }
     try {
       final response = await get(Uri.parse(
           "https://jsonplaceholder.typicode.com/posts?_page=$pageKey&_limit=$_numberOfPostsPerRequest"));

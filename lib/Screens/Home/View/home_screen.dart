@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pagination_photos_api/Routes/routes.dart';
 import 'package:pagination_photos_api/Screens/NewPosts/Controller/new_posts_controller.dart';
+import 'package:pagination_photos_api/Screens/Pagination/Controller/pagination_controller.dart';
 import 'package:pagination_photos_api/Screens/PhotosScreen/Controller/photos_controller.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -25,7 +26,7 @@ class HomeScreen extends StatelessWidget {
               Center(
                 child: TextButton(
                     onPressed: () {
-                      Get.toNamed(newPostsScreen);
+                      Get.toNamed(paginationScreen);
                       // photosController.getPhotos();
                     },
                     child: Container(
@@ -34,10 +35,27 @@ class HomeScreen extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 50, vertical: 20),
                       child: const Text(
-                        'New Posts Screen',
+                        'Pagination Screen',
                       ),
                     )),
               ),
+
+              // Center(
+              //   child: TextButton(
+              //       onPressed: () {
+              //         Get.toNamed(newPostsScreen);
+              //         // photosController.getPhotos();
+              //       },
+              //       child: Container(
+              //         decoration: BoxDecoration(
+              //             border: Border.all(color: Colors.black87)),
+              //         padding: const EdgeInsets.symmetric(
+              //             horizontal: 50, vertical: 20),
+              //         child: const Text(
+              //           'New Posts Screen',
+              //         ),
+              //       )),
+              // ),
               // Center(
               //   child: TextButton(
               //       onPressed: () {
@@ -52,20 +70,20 @@ class HomeScreen extends StatelessWidget {
               //         child: const Text('Posts Screen'),
               //       )),
               // ),
-              Center(
-                child: TextButton(
-                    onPressed: () {
-                      Get.toNamed(photosScreen);
-                      // photosController.getPhotos();
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black87)),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 50, vertical: 20),
-                      child: const Text('Photos Screen'),
-                    )),
-              ),
+              // Center(
+              //   child: TextButton(
+              //       onPressed: () {
+              //         Get.toNamed(photosScreen);
+              //         // photosController.getPhotos();
+              //       },
+              //       child: Container(
+              //         decoration: BoxDecoration(
+              //             border: Border.all(color: Colors.black87)),
+              //         padding: const EdgeInsets.symmetric(
+              //             horizontal: 50, vertical: 20),
+              //         child: const Text('Photos Screen'),
+              //       )),
+              // ),
             ],
           ),
         ),
