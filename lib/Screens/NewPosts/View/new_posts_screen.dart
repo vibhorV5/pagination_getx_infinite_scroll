@@ -15,14 +15,12 @@ class NewPostsScreen extends StatefulWidget {
 class _NewPostsScreenState extends State<NewPostsScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     Get.lazyPut(() => NewPostsController());
   }
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     Get.delete<NewPostsController>();
   }

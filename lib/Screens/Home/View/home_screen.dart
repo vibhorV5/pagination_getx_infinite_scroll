@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pagination_photos_api/Routes/routes.dart';
-import 'package:pagination_photos_api/Screens/NewPosts/Controller/new_posts_controller.dart';
-import 'package:pagination_photos_api/Screens/Pagination/Controller/pagination_controller.dart';
-import 'package:pagination_photos_api/Screens/PhotosScreen/Controller/photos_controller.dart';
+// import 'package:pagination_photos_api/Screens/NewPosts/Controller/new_posts_controller.dart';
+// import 'package:pagination_photos_api/Screens/Pagination/Controller/pagination_controller.dart';
+// import 'package:pagination_photos_api/Screens/PhotosScreen/Controller/photos_controller.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

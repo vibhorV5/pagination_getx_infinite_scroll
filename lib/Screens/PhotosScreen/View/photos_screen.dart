@@ -15,14 +15,12 @@ class PhotosScreen extends StatefulWidget {
 class _PhotosScreenState extends State<PhotosScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     Get.lazyPut(() => PhotosController());
   }
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     Get.delete<PhotosController>();
     // Get.find<PhotosScreen>().photosList = [];

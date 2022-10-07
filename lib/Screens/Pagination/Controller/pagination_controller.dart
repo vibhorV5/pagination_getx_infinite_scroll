@@ -21,7 +21,6 @@ class PaginationController extends GetxController {
 
   @override
   void onClose() {
-    // TODO: implement onClose
     super.onClose();
     scrollController.dispose();
   }
@@ -31,7 +30,7 @@ class PaginationController extends GetxController {
     scrollController.addListener(() {
       if (scrollController.position.pixels ==
           scrollController.position.maxScrollExtent) {
-        print("reached end");
+        debugPrint("reached end");
         page++;
         getMoreTask(page);
       }
@@ -46,8 +45,9 @@ class PaginationController extends GetxController {
           isMoreDataAvailable(true);
         } else {
           isMoreDataAvailable(false);
-          Get.snackbar('Message', 'No more items',
-              backgroundColor: Colors.lightBlueAccent);
+          Get.snackbar('Info', 'No more items to load',
+              backgroundColor: Colors.deepOrange.withOpacity(0.8),
+              snackPosition: SnackPosition.BOTTOM);
         }
         lstTask.addAll(resp);
       }, onError: (err) {
